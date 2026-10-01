@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&J</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="invitation-locked">
+    <main id="invitationLanding" class="invitation-landing">
+        <div class="landing-content">
+            <p class="landing-monogram" aria-hidden="true">A<span>&amp;</span>J</p>
+            <h1>Alex &amp; Jordan</h1>
+            <p class="landing-announcement">We're getting married</p>
+            <p id="landingStatus" role="status">Please use your personal invitation link to view the celebration details.</p>
+            <button id="retryInvitation" type="button" hidden>Try again</button>
+            <noscript><p>Please enable JavaScript to open your invitation.</p></noscript>
+            <p><a href="/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </main>
+    <header>
+        <h2>J&amp;A</h2>
+    </header>
+    <section id="hero">
+        <div id="hero-visual">
+            <h1>ALEX &amp; <br> JORDAN</h1>
+            <img src="images/hero-placeholder.svg" alt="Alex and Jordan">
+        </div>
+
+        <div id="hero-announcement">
+            <h3>WE'RE <br> GETTING <br> MARRIED</h3>
+            <a class="hero-rsvp" href="#RSVP">RSVP</a>
+        </div>
+    </section>
+    <section id="eventDetails">
+        <div id="Venue">
+            <h3>Wedding Location</h3>
+            <h4>Example Garden Venue</h4>
+            <p>Fictional location for demonstration</p>
+        </div>
+        <div id="Date">
+            <h3>Our Wedding Date</h3>
+            <h4>December 12, 2027</h4>
+        </div>
+    </section>
+
+    <section id="counter">
+        <h2>Counting Down to <em>Forever</em></h2>
+
+        <div class="countdown-items">
+            <div class="countdown-item">
+                <span id="days">0</span>
+                <small>Days</small>
+            </div>
+            <div class="countdown-item">
+                <span id="hours">0</span>
+                <small>Hours</small>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes">0</span>
+                <small>Minutes</small>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds">0</span>
+                <small>Seconds</small>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule">
+        <div class="schedule-intro">
+            <h2>First We Say <em>“I Do”</em></h2>
+            <p class="schedule-note">Then we eat, toast and dance the night away.</p>
+        </div>
+
+        <div class="schedule-items">
+            <article class="schedule-item">
+                <div class="schedule-icon"><img src="images/icons/arrival.svg" alt=""></div>
+                <time datetime="2027-12-12T13:30:00+02:00">12h30</time>
+                <div>
+                    <h3>Guests Arrive</h3>
+                    <p>Come in, find your seat and settle in before the ceremony begins.</p>
+                </div>
+            </article>
+
+            <article class="schedule-item">
+                <div class="schedule-icon"><img src="images/icons/service.svg" alt=""></div>
+                <time datetime="2027-12-12T14:00:00+02:00">13h00</time>
+                <div>
+                    <h3>We Say “I Do”</h3>
+                    <p>The moment we exchange our vows and make it forever.</p>
+                </div>
+            </article>
+
+            <article class="schedule-item">
+                <div class="schedule-icon"><img src="images/icons/reception.svg" alt=""></div>
+                <time datetime="2027-12-12T16:30:00+02:00">17h00</time>
+                <div>
+                    <h3>Let’s Celebrate</h3>
+                    <p>Good food, warm toasts and plenty of dancing with our favourite people.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="dress-code">
+        <h2>Dress to <em>Impress</em></h2>
+        <p>We would love our guests to join us in rich, earthy tones. Dress elegantly, feel comfortable and choose a
+            shade that makes you feel your best.</p>
+
+        <div id="dress-code-items">
+            <div class="dress-code-item">
+                <div id="dark-chocolate"></div>
+                <p>Dark Chocolate</p>
+            </div>
+            <div class="dress-code-item">
+                <div id="forest-green"></div>
+                <p>Forest Green</p>
+            </div>
+            <div class="dress-code-item">
+                <div id="warm-caramel"></div>
+                <p>Warm Caramel</p>
+            </div>
+            <div class="dress-code-item">
+                <div id="mocha"></div>
+                <p>Mocha</p>
+            </div>
+            <div class="dress-code-item">
+                <div id="taupe"></div>
+                <p>Taupe</p>
+            </div>
+        </div>
+
+        <button class="inspiration-button" type="button"
+            onclick="window.location.href='#dress-code';">Explore Our Style Inspiration</button>
+    </section>
+
+    <section id="gifts">
+        <div class="gift-note">
+            <p class="gift-script">Already feeling spoiled</p>
+            <h2>No boxes required.</h2>
+            <p>Your love, support and presence on our day are more than enough. If you insist on adding a little
+                something, choose whichever option feels most like you.</p>
+        </div>
+
+        <div class="gift-choices">
+            <div class="gift-choice">
+                <h3>Something for our home?</h3>
+                <p>We made a short wish list of pieces we would love to use and keep for years to come.</p>
+                <button id="registryButton" type="button"
+                    onclick="window.location.href='#gifts'">Open
+                    the Wish List</button>
+            </div>
+
+            <div class="gift-choice">
+                <h3>Prefer to add to the adventure?</h3>
+                <p>You are welcome to contribute toward our honeymoon and the memories waiting beyond the wedding.</p>
+
+                <details class="contribution-details">
+                    <summary>View Gifting Details</summary>
+                    <dl class="bank-details">
+                        <div>
+                            <dt>Bank</dt>
+                            <dd>Example Bank</dd>
+                        </div>
+                        <div>
+                            <dt>Account Name</dt>
+                            <dd>DEMO ACCOUNT — DO NOT PAY</dd>
+                        </div>
+                        <div>
+                            <dt>Account No.</dt>
+                            <dd>NOT APPLICABLE</dd>
+                        </div>
+                        <div>
+                            <dt>Branch Code</dt>
+                            <dd>NOT APPLICABLE</dd>
+                        </div>
+                        <div>
+                            <dt>Reference</dt>
+                            <dd>Your Full Name — A&amp;J</dd>
+                        </div>
+                    </dl>
+                </details>
+            </div>
+        </div>
+    </section>
+    <section id="FAQ">
+        <h2>A Few Things <em>to Know</em></h2>
+        <ul>
+            <li>
+                <h3>May I bring a plus one?</h3>
+                <p>We can only accommodate the guests named on your invitation. Thank you for understanding.</p>
+            </li>
+            <li>
+                <h3>May I bring my children?</h3>
+                <p>We adore your little ones, but our celebration will be an adults-only occasion.</p>
+            </li>
+            <li>
+                <h3>Will I be able to attend the ceremony if I arrive late?</h3>
+                <p>To help keep the ceremony uninterrupted, please arrive a little early and be seated before we begin.
+                    If you arrive late, we kindly ask that you wait for a suitable pause before entering quietly.</p>
+            </li>
+        </ul>
+    </section>
+    <section id="RSVP">
+        <p class="rsvp-note">We saved you a seat</p>
+        <h2>Will you celebrate with us?</h2>
+        <p>We hope you can be there. Kindly let us know whether you will be joining our special day.</p>
+        <p id="invitationStatus" class="invitation-status" aria-live="polite">Checking your invitation...</p>
+        <button id="rsvpButton" type="button" disabled>RSVP Now</button>
+
+        <div id="rsvpModal" class="rsvp-modal hidden" role="dialog" aria-modal="true" aria-labelledby="rsvpModalTitle">
+            <div class="rsvp-modal-card">
+                <button id="rsvpClose" type="button" aria-label="Close RSVP form">&times;</button>
+
+                <p id="rsvpError" role="alert" tabindex="-1"></p>
+                
+                <form id="rsvpForm">
+                    <div id="rsvp-attendance">
+                        <p class="form-step">Step one of two</p>
+                        <h4 id="rsvpModalTitle" class="formHeader">Will you be joining us?</h4>
+                        <div class="attendance-options">
+                        <label class="attendance-choice">
+                            <input type="radio" name="attendance" value="ATTENDING">
+                            <span>Yes, I’ll be there</span>
+                        </label>
+                        <label class="attendance-choice">
+                            <input type="radio" name="attendance" value="DECLINED">
+                            <span>Sorry, I can’t attend</span>
+                        </label>
+                        </div>
+                        <button class="next" type="button">Continue</button>
+                    </div>
+
+                    <div id="rsvp-party-size" class="hidden">
+                        <p class="form-step">Step two of two</p>
+
+                        <div id="partyControls">
+                            <h4 class="formHeader">Who will be joining us?</h4>
+                            <p id="primaryGuestSummary"></p>
+
+                            <div class="party-size-field">
+                            <label for="quantity">
+                                Total attending
+                                <span class="field-hint">Including yourself</span>
+                            </label>
+                            <select name="quantity" id="quantity" disabled></select>
+                            </div>
+
+                            <div id="additionalGuests"></div>
+                        </div>
+
+                        <p id="declineMessage" class="hidden">
+                            We'll miss you! Please confirm your response below.
+                        </p>
+                        
+                        <div class="rsvp-actions">
+                            <button id="rsvpBack" type="button">Back</button>
+                            <button id="Confirm" type="submit" disabled>Confirm RSVP</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-privacy-link"><a href="/privacy-policy.html">Privacy Policy</a></footer>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

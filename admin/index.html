@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <main>
+        <p id="authStatus" role="status">Checking your access...</p>
+
+        <section id="signInSection" hidden>
+            <h1>Welcome Admin</h1>
+
+            <form id="signInForm">
+                <label for="adminEmail">Email address</label>
+                <input type="email" id="adminEmail" name="email" autocomplete="username" required>
+
+                <label for="adminPassword">Password</label>
+                <input type="password" name="password" id="adminPassword" autocomplete="current-password" required>
+                <button type="submit">Sign In</button>
+                <p id="signInError" role="alert"></p>
+            </form>
+        </section>
+
+        <section id="accessDeniedSection" hidden>
+            <h1>Administrator access required</h1>
+            <p>Your account does not have access to this page.</p>
+
+            <button id="deniedSignOutButton">Sign Out</button>
+        </section>
+
+        <section id="dashboardSection" hidden>
+            <header>
+                <h2>J&amp;A <em>Dashboard</em></h2>
+                <button id="signOutButton">Sign Out</button>
+            </header>
+            <nav id="dashboardNav" aria-label="Dashboard Navigation">
+                <button type="button" data-view="overview" aria-current="page">Overview</button>
+                <button type="button" data-view="invitations">Invitations</button>
+                <button type="button" data-view="seating">Seating</button>
+            </nav>
+
+            <p id="dashboardStatus" role="status"></p>
+            <div id="reportContent"></div>
+        </section>
+
+    </main>
+    <script type="module" src="admin.js"></script>
+</body>
+
+</html>

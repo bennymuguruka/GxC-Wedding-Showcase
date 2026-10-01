@@ -1,0 +1,1141 @@
+:root{
+  --smoke: #393C39;
+  --gold: #705c0d;
+  --ivory: #fffff0;
+  --paper: #ffffff;
+  --muted-smoke: rgba(57, 60, 57, 0.72);
+  --gold-line: rgba(112, 92, 13, 0.38);
+}
+
+.hidden{
+  display: none !important;
+}
+
+[hidden],
+body.invitation-locked > :not(#invitationLanding):not(script),
+body:not(.invitation-locked) > #invitationLanding{
+  display: none !important;
+}
+
+.invitation-landing{
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.landing-content{ max-width: 30rem; }
+.landing-monogram{
+  margin: 0 0 1.5rem;
+  font: 400 clamp(5rem, 18vw, 8rem)/1 "Cormorant Garamond", serif;
+}
+.landing-monogram span{
+  color: var(--gold);
+  font-family: "Alex Brush", cursive;
+  margin: 0 -0.12em;
+}
+.landing-content h1{
+  margin: 0;
+  font: 400 clamp(2.2rem, 7vw, 3.5rem)/1.15 "Cormorant Garamond", serif;
+}
+.landing-announcement{
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.875rem;
+  margin: 1.25rem 0 2.5rem;
+}
+#landingStatus, .landing-content noscript{ line-height: 1.7; }
+#retryInvitation{
+  background: transparent;
+  color: var(--smoke);
+  border: 0;
+  border-bottom: 1px solid var(--gold);
+  padding: 0.65rem 0.2rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth; /*Smooth scroll to rsvp section*/
+}
+
+body{
+  margin: 0;
+  background: var(--ivory);
+  color: var(--smoke);
+  font-family: "Jost", sans-serif;
+}
+
+body > section{
+  position: relative;
+}
+
+body > section:not(#hero)::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gold-line);
+}
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.92);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled{
+ background: rgba(255, 255, 255, 0.8);
+ box-shadow: 0 3px 12px rgba(50, 45, 25, 0.08);
+ backdrop-filter: blur(8px);
+ -webkit-backdrop-filter: blur(8px);
+}
+
+header h2{
+  margin: 0;
+  font: 400 1.25rem "Alex Brush", cursive;
+  color: var(--smoke);
+}
+
+#hero{
+  padding: 1.75rem;
+  background: linear-gradient(var(--paper), var(--ivory));
+}
+
+#hero-visual{
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#hero img{
+  display: block;
+  width: min(80%, 800px);
+  height: auto;
+  margin-left: auto;
+}
+
+#hero h1{
+  position: absolute;
+  top: 1%;
+  left: 0;
+  z-index: 2;
+  margin: 0;
+  color: var(--smoke) ;
+  font: 500 clamp(3.5rem, 15vw, 20rem)/0.78 "Playfair Display", sans-serif;
+}
+
+#hero > div:last-child{
+  max-width: 1200px;
+  margin: 0;
+}
+
+
+
+#hero-announcement h3{
+  color: var(--smoke);
+  font: 500 clamp(2.5rem, 7vw, 5rem)/0.88 "Playfair Display", serif;
+}
+
+#hero a{
+  display: block;
+  width: min(30%, 17rem);
+  margin: 1.25rem auto 0;
+  padding: 0.7rem 1rem;
+  background: var(--smoke);
+  color: var(--paper);
+  font: 500 0.65rem "Jost", sans-serif;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+#hero-announcement {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#hero-announcement h3 {
+  margin: 0.5rem;
+}
+
+#hero-announcement .hero-rsvp {
+  width: 30%;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+#hero a:active{
+   background: var(--gold);
+  color: #222;
+}
+
+#eventDetails{
+  width: 100%;
+  display: grid;
+  gap: 0;
+  padding: 0 1.5rem 3.5rem;
+  background: var(--ivory);
+  grid-template-rows: repeat(2, minmax(20%, auto));
+}
+
+#eventDetails h3{
+
+  color: var(--gold);
+  font: 500 clamp(1.8rem, 6vw, 5rem) "Alex Brush", sans-serif;
+  margin-top: 4%;
+  margin-bottom: 2%;
+
+}
+
+#Venue{
+  border-bottom: solid 1px var(--gold-line);
+}
+
+#Date{
+  border-bottom: solid 1px var(--gold-line);
+}
+
+#Venue,
+#Date{
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0;
+}
+
+#eventDetails h4{
+  margin: 0;
+  padding: 0;
+  font: 400 clamp(2rem, 4.5vw, 3rem) "Jost", sans-serif;
+  text-transform: uppercase;
+}
+
+#Venue p{
+  margin-top: 0;
+  color: var(--muted-smoke);
+  font-family: "Jost", sans-serif;
+}
+
+#Date h4{
+  margin-bottom: 4%;
+}
+
+#counter{
+  padding: clamp(4rem, 9vw, 7rem) 1.5rem;
+  background: var(--smoke);
+  color: var(--paper);
+  text-align: center;
+}
+
+#counter h2{
+  margin: 0 0 2.5rem;
+  color: var(--paper);
+  font: 500 clamp(2.5rem, 7vw, 4.5rem)/0.95 "Playfair Display", serif;
+}
+
+#counter h2 em{
+  display: block;
+  color: #c9a44c;
+  font: 400 1.08em/0.9 "Alex Brush", cursive;
+}
+
+
+.countdown-items{
+  width: min(100%, 48rem);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(201, 164, 76, 0.45);
+  border-bottom: 1px solid rgba(201, 164, 76, 0.45);
+}
+
+.countdown-item{
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0 clamp(0.25rem, 2vw, 1.5rem);
+}
+
+.countdown-item + .countdown-item{
+  border-left: 1px solid rgba(201, 164, 76, 0.3);
+}
+
+.countdown-item span{
+  color: var(--paper);
+  font: 500 clamp(2.2rem, 7vw, 5rem) "Playfair Display", serif;
+  line-height: 1;
+}
+
+.countdown-item small{
+  margin-top: 0.5rem;
+  color: #c9a44c;
+  font: 500 clamp(0.6rem, 2vw, 0.85rem) "Jost", sans-serif;
+  letter-spacing: clamp(0.03rem, 0.3vw, 0.15rem);
+  text-transform: uppercase;
+}
+
+#schedule{
+  display: block;
+  padding: 4rem 1.5rem;
+  background: var(--paper);
+  color: var(--smoke);
+}
+
+.section-label{
+  margin: 0 0 2rem;
+  color: var(--gold);
+  font: 500 0.7rem "Jost", sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.schedule-intro h2{
+  margin: 0;
+  text-align: center;
+  color: var(--smoke);
+  font: 500 clamp(3.2rem, 6vw, 5.5rem)/0.9 "Playfair Display", serif;
+}
+
+.schedule-intro h2 em{
+  display: block;
+  color: var(--gold);
+  font: 400 1.08em/0.9 "Alex Brush", cursive;
+}
+
+.schedule-note{
+  margin: 1.5rem 0 0;
+  text-align: center;
+  color: var(--muted-smoke);
+  font: 400 1rem "Jost", sans-serif;
+}
+
+.schedule-items{
+  position: relative;
+  max-width: 42rem;
+  margin: 3rem auto 0;
+}
+
+.schedule-items::before{
+  content: "";
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+  width: 1px;
+  background: var(--gold-line);
+}
+
+.schedule-item{
+  position: relative;
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 0.5rem 1.25rem;
+  align-items: start;
+  padding: 1.5rem 0;
+}
+
+.schedule-icon{
+  grid-row: 1 / span 2;
+  position: relative;
+  z-index: 1;
+  width: 4rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--gold-line);
+  border-radius: 50%;
+  background: var(--paper);
+}
+
+.schedule-icon img{
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.schedule-item time{
+  grid-column: 2;
+  color: var(--gold);
+  font: 400 clamp(1.4rem, 2.5vw, 2rem) "Jost", sans-serif;
+}
+
+.schedule-item h3{
+  margin: 0 0 0.65rem;
+  font: 500 clamp(1.5rem, 3vw, 2.4rem) "Playfair Display", serif;
+}
+
+.schedule-item > div:last-child{
+  grid-column: 2;
+}
+
+.schedule-item p{
+  max-width: 34rem;
+  margin: 0;
+  color: var(--muted-smoke);
+  font: 400 0.8rem/1.65 "Jost", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+#dress-code{
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 5rem);
+  background: var(--ivory);
+  color: var(--smoke);
+  text-align: center;
+}
+
+#dress-code > h2{
+  margin: 0 0 1.25rem;
+  font: 500 clamp(2.5rem, 5vw, 4.5rem) "Playfair Display", serif;
+}
+
+#dress-code > p{
+  max-width: 42rem;
+  margin: 0 auto 3rem;
+  color: var(--muted-smoke);
+  font: 400 1rem/1.7 "Jost", sans-serif;
+}
+
+#dress-code-items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+  max-width: 58rem;
+  margin: 0 auto;
+}
+
+.dress-code-item{
+  flex: 0 1 6.5rem;
+  text-align: center;
+}
+
+.dress-code-item > div{
+  width: clamp(3.5rem, 10vw, 6rem);
+  aspect-ratio: 1;
+  margin: 0 auto 1rem;
+  border: 1px solid rgba(57, 60, 57, 0.15);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+#dress-code em{
+  display: inline;
+  color: var(--gold);
+  font: 400 1.08em/0.9 "Alex Brush", cursive;
+}
+
+#dark-chocolate{
+  background: #0e0705;
+}
+
+#forest-green{
+  background: #2e3b31;
+}
+
+#warm-caramel{
+  background: #703b1b;
+}
+
+#mocha{
+  background: #543a2d;
+}
+
+#taupe{
+  background: #ac9786;
+}
+
+.dress-code-item p{
+  margin: 0;
+  color: var(--muted-smoke);
+  font: 500 0.7rem "Jost", sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.inspiration-button{
+  margin-top: 3rem;
+  padding: 0.9rem 1.5rem;
+  border: 1px solid var(--smoke);
+  background: var(--smoke);
+  color: var(--paper);
+  font: 500 0.72rem "Jost", sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.inspiration-button:hover,
+.inspiration-button:focus-visible{
+  background: var(--gold);
+  color: var(--paper);
+}
+
+.inspiration-button:focus-visible{
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+#gifts{
+  padding: 4rem 1.5rem;
+  background: var(--paper);
+  color: var(--smoke);
+}
+
+.gift-note{
+  max-width: 48rem;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.gift-script{
+  margin: 0 0 0.5rem;
+  color: var(--gold);
+  font: 400 clamp(2rem, 7vw, 3.5rem) "Alex Brush", cursive;
+}
+
+.gift-note h2{
+  margin: 0;
+  font: 500 clamp(2.7rem, 9vw, 5rem)/1 "Playfair Display", serif;
+}
+
+.gift-note > p:last-child{
+  max-width: 40rem;
+  margin: 1.5rem auto 0;
+  color: var(--muted-smoke);
+  font: 400 1rem/1.7 "Jost", sans-serif;
+}
+
+.gift-choices{
+  max-width: 56rem;
+  margin: 0 auto;
+  border-top: 1px solid var(--gold-line);
+}
+
+.gift-choice{
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--gold-line);
+  text-align: center;
+}
+
+.gift-choice h3{
+  margin: 0 0 1rem;
+  font: 500 clamp(1.8rem, 7vw, 3rem)/1.05 "Playfair Display", serif;
+}
+
+.gift-choice > p{
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+  color: var(--muted-smoke);
+  font: 400 0.95rem/1.7 "Jost", sans-serif;
+}
+
+.contribution-details{
+  max-width: 34rem;
+  margin: 0 auto;
+}
+
+.contribution-details summary{
+  display: inline-block;
+  padding: 0.9rem 1.5rem;
+  border: 1px solid var(--smoke);
+  background: var(--smoke);
+  color: var(--paper);
+  font: 500 0.72rem "Jost", sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  list-style: none;
+}
+
+.contribution-details summary::-webkit-details-marker{
+  display: none;
+}
+
+.contribution-details[open] summary{
+  margin-bottom: 1.5rem;
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.bank-details{
+  margin: 0 0 2rem;
+  border-top: 1px solid var(--gold-line);
+  text-align: left;
+}
+
+.bank-details div{
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.8fr) minmax(0, 1.2fr);
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--gold-line);
+}
+
+.bank-details dt,
+.bank-details dd{
+  margin: 0;
+}
+
+.bank-details dt{
+  color: var(--muted-smoke);
+  font: 500 0.68rem "Jost", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.bank-details dd{
+  color: var(--smoke);
+  font: 400 0.9rem "Jost", sans-serif;
+  text-align: right;
+}
+
+#registryButton{
+  padding: 0.9rem 1.5rem;
+  border: 1px solid var(--smoke);
+  background: var(--smoke);
+  color: var(--paper);
+  font: 500 0.72rem "Jost", sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#registryButton:hover,
+#registryButton:focus-visible,
+.contribution-details summary:hover,
+.contribution-details summary:focus-visible{
+  background: var(--gold);
+  color: var(--paper);
+}
+
+#registryButton:focus-visible,
+.contribution-details summary:focus-visible{
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+#RSVP{
+  padding: 4rem 1.5rem;
+  background: var(--paper);
+  color: var(--smoke);
+  text-align: center;
+}
+
+#FAQ{
+  padding: 4rem 1.5rem;
+  background: var(--ivory);
+  color: var(--smoke);
+  text-align: center;
+}
+
+#FAQ h2{
+  margin: 0 0 3rem;
+  font: 500 clamp(2.7rem, 9vw, 5rem)/0.95 "Playfair Display", serif;
+}
+
+#FAQ h2 em{
+  display: block;
+  color: var(--gold);
+  font: 400 1.05em/0.9 "Alex Brush", cursive;
+}
+
+#FAQ ul{
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--gold-line);
+}
+
+#FAQ li{
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--gold-line);
+}
+
+#FAQ h3{
+  margin: 0 0 0.65rem;
+  font: 500 clamp(1.35rem, 5vw, 2rem) "Playfair Display", serif;
+}
+
+#FAQ li p{
+  max-width: 38rem;
+  margin: 0 auto;
+  color: var(--muted-smoke);
+  font: 400 0.95rem/1.65 "Jost", sans-serif;
+}
+
+.rsvp-note{
+  margin: 0 0 0.75rem;
+  color: var(--gold);
+  font: 400 clamp(2rem, 7vw, 3.5rem) "Alex Brush", cursive;
+}
+
+#RSVP h2{
+  margin: 0;
+  font: 500 clamp(2.7rem, 9vw, 5rem)/1 "Playfair Display", serif;
+}
+
+#RSVP > p:not(.rsvp-note){
+  max-width: 38rem;
+  margin: 1.5rem auto 2rem;
+  color: var(--muted-smoke);
+  font: 400 1rem/1.7 "Jost", sans-serif;
+}
+
+#rsvpButton,
+#rsvpForm button{
+  min-height: 3rem;
+  padding: 0.9rem 1.5rem;
+  border: 1px solid var(--smoke);
+  background: var(--smoke);
+  color: var(--paper);
+  font: 500 0.72rem "Jost", sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+#rsvpButton:hover:not(:disabled),
+#rsvpButton:focus-visible,
+#rsvpForm button:hover:not(:disabled),
+#rsvpForm button:focus-visible{
+  background: var(--gold);
+}
+
+#rsvpButton:disabled,
+#rsvpForm button:disabled,
+#rsvpClose:disabled{
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+#rsvpForm[aria-busy="true"] button:disabled{
+  cursor: progress;
+}
+
+#rsvpForm{
+  margin: 0;
+}
+
+#rsvpForm > div{
+  padding: 0;
+}
+
+body.modal-open{
+  overflow: hidden;
+}
+
+.rsvp-modal{
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(24, 25, 24, 0.56);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.rsvp-modal-card{
+  position: relative;
+  width: min(100%, 32rem);
+  max-height: calc(100vh - 2rem);
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border: 1px solid var(--gold-line);
+  background: var(--ivory);
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.22);
+  text-align: center;
+}
+
+#rsvpClose{
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--smoke);
+  font: 300 2rem/1 "Jost", sans-serif;
+  cursor: pointer;
+}
+
+#rsvpClose:hover:not(:disabled){
+  background: rgba(112, 92, 13, 0.08);
+}
+
+#rsvpClose:focus-visible,
+#rsvpForm button:focus-visible{
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.form-step{
+  margin: 0 1.5rem 1.25rem;
+  color: var(--gold);
+  font: 500 0.68rem "Jost", sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.formHeader{
+  margin: 0 0 1.5rem;
+  font: 400 clamp(1.65rem, 5vw, 1.9rem)/1.25 "Playfair Display", serif;
+}
+
+#declineMessage{
+  margin: 0 0 1.5rem;
+  color: var(--muted-smoke);
+  font: 400 0.95rem/1.65 "Jost", sans-serif;
+}
+
+.attendance-options{
+  display: grid;
+  gap: 0.25rem;
+  margin: 1.75rem 0;
+}
+
+.attendance-choice{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 0;
+  font: 400 0.95rem/1.5 "Jost", sans-serif;
+  cursor: pointer;
+}
+
+.attendance-choice:has(input:checked){
+  color: var(--gold);
+}
+
+.attendance-choice:has(input:focus-visible){
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.attendance-choice:has(input:disabled){
+  opacity: 0.6;
+  cursor: progress;
+}
+
+#rsvpForm input[type="radio"]{
+  flex: 0 0 auto;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0;
+  accent-color: var(--gold);
+}
+
+#rsvpForm .next{
+  min-width: 10rem;
+}
+
+#primaryGuestSummary{
+  margin: -0.5rem 0 1.75rem;
+  color: var(--muted-smoke);
+  font: 400 0.95rem/1.5 "Jost", sans-serif;
+  overflow-wrap: anywhere;
+}
+
+.party-size-field{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.party-size-field > label{
+  font: 500 0.95rem/1.4 "Jost", sans-serif;
+}
+
+.field-hint{
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--muted-smoke);
+  font: 400 0.8rem/1.4 "Jost", sans-serif;
+}
+
+#rsvpForm select,
+#additionalGuests input{
+  display: block;
+  min-height: 3.25rem;
+  padding: 0.8rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--gold-line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--smoke);
+  font: 400 1rem/1.5 "Jost", sans-serif;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#rsvpForm select{
+  flex: 0 0 5.5rem;
+  width: 5.5rem;
+  cursor: pointer;
+  padding-left: 0.75rem;
+}
+
+#rsvpForm select:focus-visible,
+#additionalGuests input:focus-visible{
+  outline: none;
+  border-bottom-color: var(--gold);
+  box-shadow: inset 0 -1px 0 var(--gold);
+}
+
+#additionalGuests:not(:empty){
+  display: grid;
+  gap: 1.5rem;
+  margin: 1.75rem 0 0;
+  text-align: left;
+}
+
+.additional-guest-field{
+  min-width: 0;
+}
+
+.additional-guest-field label{
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--gold);
+  font: 500 0.7rem/1.5 "Jost", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#additionalGuests input{
+  width: 100%;
+  min-width: 0;
+}
+
+#additionalGuests input::placeholder{
+  color: #797b73;
+}
+
+#additionalGuests input:user-invalid{
+  border-color: #a34536;
+}
+
+#rsvpForm input:disabled,
+#rsvpForm select:disabled{
+  opacity: 0.65;
+  cursor: progress;
+}
+
+.rsvp-actions{
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+#rsvpForm #Confirm{
+  flex: 1;
+}
+
+#rsvpForm #rsvpBack{
+  padding-inline: 1rem;
+  border-color: transparent;
+  background: transparent;
+  color: var(--gold);
+}
+
+#rsvpForm #rsvpBack:hover:not(:disabled){
+  background: rgba(112, 92, 13, 0.08);
+}
+
+#declineMessage{
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+}
+
+#rsvpError:empty{
+  display: none;
+}
+
+#rsvpError:not(:empty){
+  margin: 1.5rem 0;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid #a34536;
+  border-radius: 0.25rem;
+  background: #f9eee9;
+  color: #813529;
+  font: 400 0.9rem/1.6 "Jost", sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce){
+  #rsvpForm *,
+  #rsvpButton{
+    transition: none;
+  }
+}
+
+.rsvp-thanks{
+  margin: 0;
+  color: var(--gold);
+  font: 400 clamp(2rem, 7vw, 3rem) "Alex Brush", cursive;
+}
+
+.rsvp-confirmation h2{
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px){
+  #hero{
+    padding: 1.75rem clamp(2rem, 4vw, 4rem);
+  }
+
+  #hero-announcement,
+  #hero-visual{
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #hero h1{
+    font-size: clamp(6rem, 12vw, 12rem);
+  }
+
+  #eventDetails{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    gap: clamp(3rem, 7vw, 7rem);
+    padding: 0 clamp(3rem, 7vw, 7rem) clamp(5rem, 8vw, 7rem);
+  }
+
+  #Venue,
+  #Date{
+    border-bottom: 1px solid var(--gold-line);
+  }
+
+  #schedule{
+    padding: clamp(5rem, 8vw, 7rem) clamp(3rem, 5vw, 5rem);
+  }
+
+  .section-label{
+    margin-bottom: clamp(2rem, 5vw, 4rem);
+  }
+
+  .schedule-note{
+    margin-top: 2.5rem;
+  }
+
+  .schedule-items{
+    max-width: 70rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 4rem;
+  }
+
+  .schedule-items::before{
+    top: 2rem;
+    right: 16.666%;
+    bottom: auto;
+    left: 16.666%;
+    width: auto;
+    height: 1px;
+  }
+
+  .schedule-item{
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  .schedule-icon{
+    grid-row: auto;
+    grid-column: 1;
+    margin: 0 auto 0.75rem;
+  }
+
+  .schedule-item time,
+  .schedule-item > div:last-child{
+    grid-column: 1;
+  }
+
+  #dress-code-items{
+    flex-wrap: nowrap;
+  }
+
+  .dress-code-item{
+    flex-basis: 10rem;
+  }
+
+  #gifts{
+    padding: clamp(5rem, 8vw, 7rem) clamp(3rem, 5vw, 5rem);
+  }
+
+  .gift-note{
+    margin-bottom: 4.5rem;
+  }
+
+  .gift-choices{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gift-choice{
+    padding: 2rem 3rem;
+  }
+
+  .gift-choice:first-child{
+    border-right: 1px solid var(--gold-line);
+  }
+
+  .gift-choice > p{
+    min-height: 5rem;
+  }
+}
+/* Keep the policy link visible after an invitation is opened. */
+.site-privacy-link {
+  padding: 2rem;
+  text-align: center;
+}
+
+.landing-content a,
+.site-privacy-link a {
+  color: #705c0d;
+}
+
+.landing-content a:focus-visible,
+.site-privacy-link a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}

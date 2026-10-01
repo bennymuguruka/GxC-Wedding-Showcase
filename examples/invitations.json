@@ -1,0 +1,4 @@
+[
+  {"id":"demo","primaryGuestName":"Taylor Example","phoneNumber":"NOT_A_REAL_NUMBER","maximumPartySize":3,"rsvpStatus":"PENDING"},
+  {"id":"fictional-party-two","primaryGuestName":"Morgan Sample","phoneNumber":"NOT_A_REAL_NUMBER","maximumPartySize":2,"confirmedPartySize":2,"guestNames":["Casey Sample"],"rsvpStatus":"ATTENDING"}
+]

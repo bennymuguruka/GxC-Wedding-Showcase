@@ -1,0 +1,32 @@
+{
+  "name": "wedding-invitation-showcase",
+  "version": "1.0.0",
+  "description": "Wedding invitation, RSVP, admin dashboard and seating system built with Vite and AWS Amplify",
+  "main": "script.js",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sandbox": "ampx sandbox"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-amplify": "^6.20.0"
+  },
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.24.0",
+    "@aws-amplify/backend-cli": "^1.9.0",
+    "@aws-sdk/client-dynamodb": "^3.1125.0",
+    "@types/node": "^26.4.1",
+    "aws-cdk-lib": "2.267.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.3",
+    "vite": "^8.2.2"
+  }
+}

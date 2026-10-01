@@ -1,0 +1,20 @@
+#Dependacies
+node_modules/
+
+#Vite build output
+dist/
+
+#Enviroment variables and secrets
+.env
+.env.*
+!.env.example
+
+#Amplify-genearated local files
+amplify_outputs.json
+.amplify/
+
+#Logs
+*.log
+npm-debug.log*
+
+HANDOFF.md
