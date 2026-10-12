@@ -62,7 +62,7 @@ Use `examples/invitations.json` as fictional record examples for your own sandbo
 
 ## Design preview
 
-![Fictional placeholder artwork](images/IMG_1834.jpeg)
+(images/WhatsApp Video 2026-10-12 at 06.37.37.mp4)
 
 The original personal photographs and invitation artwork have been replaced. Actual application screenshots and a recorded walkthrough have not yet been added.
 
