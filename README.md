@@ -62,7 +62,7 @@ Use `examples/invitations.json` as fictional record examples for your own sandbo
 
 ## Design preview
 
-![Fictional placeholder artwork](images/hero-placeholder.svg)
+![Fictional placeholder artwork](images/IMG_1834.jpeg)
 
 The original personal photographs and invitation artwork have been replaced with repository-owned SVG artwork. Actual application screenshots and a recorded walkthrough have not yet been added.
 
