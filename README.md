@@ -62,7 +62,7 @@ Use `examples/invitations.json` as fictional record examples for your own sandbo
 
 ## Design preview
 
-https://github.com/bennymuguruka/GxC-Wedding-Showcase/blob/main/images/WhatsApp%20Video%202026-10-12%20at%2006.37.37.mp4
+[https://github.com/bennymuguruka/GxC-Wedding-Showcase/blob/main/images/WhatsApp%20Video%202026-10-12%20at%2006.37.37.mp4](https://github.com/user-attachments/assets/b938b25a-5944-44cc-a1ec-95d160f10bd5)
 
 The original personal photographs and invitation artwork have been replaced. Actual application screenshots and a recorded walkthrough have not yet been added.
 
